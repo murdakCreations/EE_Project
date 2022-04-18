@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: arial;
+}
+
+nav {
+    background-color: black;
+    padding: 1em;
+}
+
+nav a {
+    color: white;
+}
+
+nav .logo {
+    font-size: 36px;
+}
+
+nav .notif img{
+    height: 40px;
+    width: 40px;
+    float: right;
+}
+
+nav .buildName {
+    font-size: 26px;
+    float:right;
+    margin-top: 0.3em;
+    margin-right: 0.5em;
+}
