@@ -31,41 +31,12 @@ nav .buildName {
     margin-right: 0.5em;
 }
 
-main .pgTitle {
-    display: flex;
-    font-size: 27px;
+aside {
+    float: left;
 }
 
-main .pgTitle input{
-    border: none;
-    font-size: 27px;
-}
-
-main .overall {
-    display: flex;
-}
-
-main .dotted {
-    border-style: dotted;
-    padding: 5em 3em;
-    width: fit-content;
-}
-
-main .tbl table {
-    border-collapse: collapse;
-}
-
-main .tbl th{
-    border: 0.1em solid;
-    padding: 0.3em;
-}
-
-main .tbl table, th, td {
-    text-align: center;
-}
-
-main .tbl table, th, td a{
-    margin: 0.3em;
+main img {
+    width: 1001px;
 }
 
 footer {
