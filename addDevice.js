@@ -1,2 +1,4 @@
-// on mouse click, get x,y axis
-// on mouse release, get x,y axis
+function addImg(modalId){
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+}

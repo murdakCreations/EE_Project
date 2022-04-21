@@ -13,26 +13,34 @@
         <a class="notif" href="#"><img src="img_489991.png"></a>
         <a class="buildName" href="#">Building Name</a>    
     </nav>
-    <aside>
-        <h3>Add a Device:</h3>
-        <ul>
-            <li>
-                <button>switch</button>
-            </li>
-            <li>
-                <button>outlet</button>
-            </li>
-            <li>
-                <button>light bulb</button>
-            </li>
-            <li>
-                <button>wire</button>
-            </li>
-        </ul>
-    </aside>
-    <main>
+    <main onload="addImg('modalForm')">
+        <aside>
+            <h3>Add a Device:</h3>
+            <ul>
+                <li>
+                    <button>switch</button>
+                </li>
+                <li>
+                    <button>outlet</button>
+                </li>
+                <li>
+                    <button>light bulb</button>
+                </li>
+                <li>
+                    <button>wire</button>
+                </li>
+            </ul>
+        </aside>
         <input type="text" name="" id="" placeholder="Add Floor Plan Name">
-        <img src="d3257e394876c815d7fe55d2867d545e.png" alt="">
+        <div id="modalForm">
+            <div class="dotted">
+                <label for="imgFile">Select Image File</label>
+                <input type="file" name="imgFile" id="imgFile">
+                <button>Save</button>
+                <button>Close</button>
+            </div>
+        </div>
+        
     </main>
     <footer>
         <ul>
