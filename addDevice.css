@@ -42,7 +42,7 @@ main {
 }
 
 main #floorImg {
-    width: 1001px;
+    width: 100px;
 }
 
 main .modalForm {
@@ -56,7 +56,6 @@ main .modalForm {
 }
 
 main .dotted {
-    display: flex;
     border-style: dotted;
     padding: 5em 3em;
     width: fit-content;
