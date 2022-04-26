@@ -12,18 +12,15 @@ saveBtn.addEventListener('click', function(){
     // save img to local storage
 
     const reader = new FileReader();
-    localStorage.setItem(fileName.name, reader.result);
-
-    // retrieve localStorage image
-    let imgSRC = localStorage.getItem(fileName.name);
-
-    if (imgSRC){
+    reader.addEventListener('load', ()=>{
+        imgSRC = reader.result;
         // create new image
         const newElement = document.createElement("img");
         const areaOfAct = document.getElementById('imgArea');
         newElement.src = imgSRC;
-        newElement.style.width='100px';
-        newElement.style.height='100px';
+        newElement.style.width='1001px';
+        newElement.style.height='auto';
         areaOfAct.appendChild(newElement);
-    }
+    });
+    reader.readAsDataURL(fileName);
 });
