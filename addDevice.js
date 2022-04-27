@@ -14,13 +14,43 @@ saveBtn.addEventListener('click', function(){
     const reader = new FileReader();
     reader.addEventListener('load', ()=>{
         imgSRC = reader.result;
-        // create new image
-        const newElement = document.createElement("img");
+        // create background image
         const areaOfAct = document.getElementById('imgArea');
-        newElement.src = imgSRC;
-        newElement.style.width='1001px';
-        newElement.style.height='auto';
-        areaOfAct.appendChild(newElement);
+        areaOfAct.style.backgroundImage = 'url('+imgSRC+')';
+        areaOfAct.style.width = '200px';
+        areaOfAct.style.height = '200px';
+        areaOfAct.style.backgroundSize = '200px 200px';
     });
     reader.readAsDataURL(fileName);
 });
+
+function createBtn(id) {
+    const areaOfAct = document.getElementById('imgArea');
+    let iX, iY, fX, fY;
+    areaOfAct.addEventListener("mousedown", function(e){
+        iX = e.pageX;
+        iY = e.pageY;
+    });
+
+    areaOfAct.addEventListener("mouseup", function(e){
+        fX = e.pageX;
+        fY = e.pageY;
+        let width = fX - iX;
+        let height = fY - iY;
+        const newElement = document.createElement("button");
+        newElement.innerHTML="<img style='width:100%;height:100%;'src='"+id+".png'>";
+        newElement.style.overflow='hidden';
+        //newElement.style.backgroundColor='black';
+        newElement.style.position='absolute';
+        newElement.style.left=iX+'px';
+        newElement.style.top=iY+'px';
+        newElement.style.width=width+'px';
+        newElement.style.height=height+'px';
+        newElement.style.backgroundSize='cover'
+        //newElement.style.backgroundRepeat='no-repeat';
+        newElement.style.padding='0';
+        areaOfAct.appendChild(newElement);
+        //console.log("final position: " + e.pageX + "," + e.pageY);
+    });
+
+}
