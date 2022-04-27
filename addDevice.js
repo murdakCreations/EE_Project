@@ -51,6 +51,34 @@ function createBtn(id) {
         newElement.style.padding='0';
         areaOfAct.appendChild(newElement);
         //console.log("final position: " + e.pageX + "," + e.pageY);
+        if (newElement) {
+            setTimeout(createInfo,1000);
+        }
     });
+    
+}
 
+function createInfo(){
+    const areaOfAct = document.getElementById('imgArea');
+    areaOfAct.style.display='none';
+    const parentDiv = document.getElementById('modalDevInfo');
+    let lbls = ['Device Name', 'Life Span'];
+
+    const newElementLbl = document.createElement("label");
+    const newElementInput = document.createElement("input");
+    const newElementBtn = document.createElement("button");
+    newElementLbl.innerHTML = lbls[0];
+    newElementBtn.innerHTML = "next";
+    parentDiv.appendChild(newElementLbl);
+    parentDiv.appendChild(newElementInput);
+    parentDiv.appendChild(newElementBtn);
+
+    newElementBtn.addEventListener('click', function(){
+        newElementLbl.innerHTML = lbls[1];
+        newElementBtn.innerHTML = "save";
+        newElementBtn.addEventListener('click', function(){
+            parentDiv.style.display = 'none';
+            // back to dashboard
+        });
+    });
 }
