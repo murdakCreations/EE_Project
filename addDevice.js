@@ -79,6 +79,7 @@ function createInfo(){
         newElementBtn.addEventListener('click', function(){
             parentDiv.style.display = 'none';
             // back to dashboard
+            location.replace("./index.html");
         });
     });
 }

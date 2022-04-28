@@ -36,9 +36,15 @@ main .pgTitle {
     font-size: 27px;
 }
 
+main .pgTitle div {
+    margin: 10px;
+}
+
 main .pgTitle input{
     border: none;
     font-size: 27px;
+    font-weight: 700;
+    pointer-events: none;
 }
 
 main .overall {
@@ -47,8 +53,15 @@ main .overall {
 
 main .dotted {
     border-style: dotted;
-    padding: 5em 3em;
+    padding: 10em 6em;
     width: fit-content;
+    /*top right bottom left*/
+    margin: 50px 50px 50px 100px;
+}
+
+main .tbl {
+    /*top right bottom left*/
+    margin: 50px 0px 0px 0px;   
 }
 
 main .tbl table {

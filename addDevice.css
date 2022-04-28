@@ -31,9 +31,45 @@ nav .buildName {
     margin-right: 0.5em;
 }
 
-aside {
+main aside {
     float: left;
     background-color: #CCCBCB;
+    width: 200px;
+    /*top right bottom left*/
+    padding: 100px 0px 100px 0px;
+    display: none;
+}
+
+main aside h3 {
+    margin-left: 40px;
+}
+
+main aside ul {
+    list-style-type: none;
+}
+
+main aside ul li img {
+    width: 20px;
+    /*top right bottom left*/
+    margin: 5px;
+}
+
+main aside ul li button {
+    display: flex;
+    border: none;
+    width: 100%;
+    /*top right bottom left*/
+    padding: 5px 0px 5px 40px;
+    background-color: #CCCBCB;
+}
+
+main aside ul li button:hover {
+    background-color: #979696;
+}
+
+main aside ul li button div {
+    margin: 5px;
+    font-size: 16px;
 }
 
 main {
@@ -59,6 +95,8 @@ main .dotted {
     border-style: dotted;
     padding: 5em 3em;
     width: fit-content;
+    /*top right bottom left*/
+    margin: 10px 0px 0px 300px;
 }
 
 footer {
