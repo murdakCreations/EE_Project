@@ -14,12 +14,17 @@ saveBtn.addEventListener('click', function(){
     const reader = new FileReader();
     reader.addEventListener('load', ()=>{
         imgSRC = reader.result;
+        // display aside
+        const asideTag = document.querySelector("aside");
+        asideTag.style.display = "block";
+
         // create background image
         const areaOfAct = document.getElementById('imgArea');
         areaOfAct.style.backgroundImage = 'url('+imgSRC+')';
-        areaOfAct.style.width = '200px';
-        areaOfAct.style.height = '200px';
-        areaOfAct.style.backgroundSize = '200px 200px';
+        areaOfAct.style.width = '400px';
+        areaOfAct.style.height = '400px';
+        areaOfAct.style.marginLeft = '400px';
+        areaOfAct.style.backgroundSize = '400px 400px';
     });
     reader.readAsDataURL(fileName);
 });
