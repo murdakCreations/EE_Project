@@ -3,6 +3,7 @@
     padding: 0;
     text-decoration: none;
     font-family: arial;
+    border: none;
 }
 
 nav {
@@ -31,6 +32,30 @@ nav .buildName {
     margin-right: 0.5em;
 }
 
+nav .notifContent {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: gray;
+    float: right;
+}
+
+.notif:hover .notifContent {
+    display: block;
+}
+
+main #modalForm {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(230, 230, 230, 0.8); /* Black w/ opacity */
+}
+
 main .pgTitle {
     display: flex;
     font-size: 27px;
@@ -56,7 +81,8 @@ main .dotted {
     padding: 10em 6em;
     width: fit-content;
     /*top right bottom left*/
-    margin: 50px 50px 50px 100px;
+    margin: 50px 30px 50px 50px;
+    background-color: white;
 }
 
 main .tbl {

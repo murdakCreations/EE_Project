@@ -10,7 +10,10 @@
 <body>
     <nav>
         <a class="logo" href="#">E-LOGO</a>
-        <a class="notif" href="#"><img src="img_489991.png"></a>
+        <a class="notif" href="#">
+            <img src="img_489991.png">
+            <div class="notifContent">this is a notification</div>
+        </a>
         <a class="buildName" href="#">Building Name</a>    
     </nav>
     <main>
@@ -19,8 +22,20 @@
             <input type="text" value="Room 1">
         </div>
         <div class="overall">
-            <div class="dotted">
-                <a href="addFloorPlan.html">+ Add Floor Plan</a>
+            <button class="dotted" id="addImg">+ Add Floor Plan</button>
+            <div id="modalForm">
+                <div class="dotted">
+                    <input type="text" name="" id="" placeholder="Add Floor Plan Name">
+                    <div class="inFile">
+                        <label for="imgFile">Select Image File</label>
+                        <input type="file" name="imgFile" id="imgFile">
+                    </div>
+                    <div class="btns">
+                        <button id="saveImg">Save</button>
+                        <button>Close</button>
+                    </div>
+                    
+                </div>
             </div>
             <div class="tbl">
                 <table>
@@ -30,8 +45,9 @@
                         <th>Device Type</th>
                         <th>Life Span</th>
                         <th>Meter (Hr)</th>
-                        <th>Signal Indication</th>
+                        <th>Date of installment</th>
                         <th>Status</th>
+                        <th>Inspection Status</th>
                         <th>Commands</th>
                     </tr>
                     <tr>
@@ -42,9 +58,11 @@
                         <td>5</td>
                         <td>6</td>
                         <td>Functional</td>
+                        <td>Inspected</td>
                         <td><a href="">Edit</a><a href="">Delete</a></td>
                     </tr>
                 </table>
+                <a href="">+Add Device</a>
             </div>
         </div>
     </main>
@@ -55,5 +73,6 @@
             <li><a href="">Contact Us</a></li>
         </ul>
     </footer>
+    <script src="index.js"></script>
 </body>
 </html>
