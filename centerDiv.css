@@ -1,0 +1,33 @@
+#modalForm {
+    display: flex;
+    justify-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(230, 230, 230, 0.8); /* Black w/ opacity */
+}
+
+#dottedModal {
+    margin-top: 200px;
+    background-color: #fff;
+    height: fit-content;
+    width: fit-content;
+}
+
+#dottedModal input {
+    margin: 5px;
+}
+
+#dottedModal .inFile {
+    margin: 5px;
+}
+
+#dottedModal .btns button{
+    /*top right bottom left*/
+    margin: 0px 5px 0px 5px;
+    padding: 5px 10px;
+}
