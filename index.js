@@ -25,7 +25,7 @@ saveBtn.addEventListener('click', function(){
     reader.readAsDataURL(fileName);
 });
 
-let closeBtn = document.getElementById('closeModal');
+let closeBtn = document.querySelector('#closeModal');
 closeBtn.addEventListener('click', ()=>{
     modalForm.style.display = 'none';
 });
@@ -34,4 +34,19 @@ let addDevBtn = document.getElementById('addDevice');
 let addDevModal = document.getElementById("addDev");
 addDevBtn.addEventListener('click', () => {
     addDevModal.style.display = 'flex';
+});
+
+let closeDevBtn = document.querySelector('#closeDevModal');
+closeDevBtn.addEventListener('click', ()=>{
+    addDevModal.style.display = 'none';
+});
+
+// when save is clicked, save input values
+let saveDevBtn = document.getElementById("saveDevModal");
+saveDevBtn.addEventListener('click', ()=>{
+    let inputID = ['devId', 'devLoc','life','dateInstall','stat','inspStat'];
+    for (var indx = 0; indx < inputID.length; indx++){
+        inputVal = document.getElementById(inputID[indx]).value;
+        localStorage.setItem(inputID[indx], inputVal);
+    }
 });
