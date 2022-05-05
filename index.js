@@ -43,10 +43,52 @@ closeDevBtn.addEventListener('click', ()=>{
 
 // when save is clicked, save input values
 let saveDevBtn = document.getElementById("saveDevModal");
+let inputID = ['devId', 'devLoc','life','dateInstall','stat','inspStat'];
 saveDevBtn.addEventListener('click', ()=>{
-    let inputID = ['devId', 'devLoc','life','dateInstall','stat','inspStat'];
     for (var indx = 0; indx < inputID.length; indx++){
         inputVal = document.getElementById(inputID[indx]).value;
         localStorage.setItem(inputID[indx], inputVal);
     }
+    // close modal
+    addDevModal.style.display = 'none';
+    
+    // clear input values
+    for (var indx = 0; indx < inputID.length; indx++){
+        inputVal = document.getElementById(inputID[indx]);
+        inputVal.value = '';
+    }
+
+    // display localstorage item to table
+    // add table row
+    var mainTbl = document.getElementById('devTbl');
+    tblRow = document.getElementsByTagName('tr');
+    // create table data
+    // data from local storage
+    row = mainTbl.insertRow(tblRow.length);
+    
+    for (var indx = 0; indx < inputID.length; indx++){
+        row.insertCell(indx).innerHTML = localStorage.getItem(inputID[indx]);        
+    }
+    
+    //tblRow.appendChild(tblData);
+    
+
+
+    // get row index of last table row
+    
+    /*for (indx = 0; indx < tblRow.length; indx++) {
+        console.log("current row index: " + tblRow[indx].rowIndex);
+    }*/
+    /*for (var indx = 0; indx < inputID.length; indx++){
+        // create table data
+        tblData = document.createElement('td');
+        // data from local storage
+        localData = localStorage.getItem(inputID[indx]);
+        tblData.value = localData;
+        tblRow.appendChild(tblData);
+    }*/
+    
 });
+
+// retrieve localstorage item
+// localStorage.getItem(inputID[0])
