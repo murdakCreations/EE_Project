@@ -43,7 +43,8 @@ closeDevBtn.addEventListener('click', ()=>{
 
 // when save is clicked, save input values
 let saveDevBtn = document.getElementById("saveDevModal");
-let inputID = ['devId', 'devLoc','life','dateInstall','stat','inspStat'];
+let inputID = ['devId', 'devLoc','devTyp','life','meter','dateInstall','stat','inspStat'];
+console.log(inputID.length);
 saveDevBtn.addEventListener('click', ()=>{
     for (var indx = 0; indx < inputID.length; indx++){
         inputVal = document.getElementById(inputID[indx]).value;
@@ -69,7 +70,7 @@ saveDevBtn.addEventListener('click', ()=>{
     for (var indx = 0; indx < inputID.length; indx++){
         row.insertCell(indx).innerHTML = localStorage.getItem(inputID[indx]);        
     }
-    
+    row.insertCell(inputID.length).innerHTML = '<a href="">Edit</a><a href="">Delete</a>';
     //tblRow.appendChild(tblData);
     
 
