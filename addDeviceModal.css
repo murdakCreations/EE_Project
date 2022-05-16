@@ -1,0 +1,31 @@
+.modalForm {
+    display: flex;
+    justify-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(230, 230, 230, 0.8); /* Black w/ opacity */
+}
+
+.modalInput input {
+    float: right;
+}
+
+.modalInput {
+    margin: 10px;
+}
+
+.overall {
+    width: 400px;
+    margin-top: 200px;
+    background-color: #fff;
+}
+
+.modalBtn {
+    float: right;
+    margin-right: 15px;
+}

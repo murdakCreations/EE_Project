@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav>
+        <a class="logo" href="#">E-LOGO</a>
+        <a class="notif" href="#">
+            <img src="/img_489991.png">
+            <div class="notifContent">this is a notification</div>
+        </a>
+        <a class="buildName" href="#">Building Name</a>    
+    </nav>
+    <main>
+        <div class="pgTitle">
+            <div>Summary of Electric Devices in </div>
+            <input type="text" value="Room 1">
+        </div>
+        <div class="overall">
+            <button id="addImg">
+                <div id="btnText">
+                    + Add Floor Plan
+                </div>
+            </button>
+            <div class="modalForm" id="addImgModal">
+                <form id="dottedModal" action="/device" method="POST">
+                    <input type="text" name="" id="" placeholder="Add Floor Plan Name">
+                    <div class="inFile">
+                        <label for="imgFile">Select Image File</label>
+                        <input type="file" name="imgFile" id="imgFile">
+                    </div>
+                    <div class="btns">
+                        <button id="saveImg" type="submit">Save</button>
+                        <button id="closeModal">Close</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tbl">
+                <table id="devTbl">
+                    <tr>
+                        <th>Devie ID</th>
+                        <th>Device Location</th>
+                        <th>Device Type</th>
+                        <th>Life Span</th>
+                        <th>Meter (Hr)</th>
+                        <th>Date of installment</th>
+                        <th>Status</th>
+                        <th>Inspection Status</th>
+                        <th>Commands</th>
+                    </tr>
+                    <tr>
+                        <td>bla1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>Functional</td>
+                        <td>Inspected</td>
+                        <td><a href="">Edit</a><a href="">Delete</a></td>
+                    </tr>
+                </table>
+                <button id="addDevice">+Add Device</button>
+                <div class="modalForm" id="addDev">
+                    <form class="modalOverall" action="/device" method="POST">
+                        <div class="modalInput">
+                            <label for="">Device ID</label>
+                            <input id="devId" type="text">
+                        </div>
+                        <div class="modalInput">
+                            <label for="">Device Location</label>
+                            <input id="devLoc" type="text">
+                        </div>
+                        <div class="modalInput">
+                            <label for="">Device Type</label>
+                            <input id="devTyp" type="text">
+                        </div>
+                        <div class="modalInput">
+                            <label for="">Life Span</label>
+                            <input id="life" type="number">
+                        </div>
+                        <div class="modalInput">
+                            <label for="">Meter (Hr)</label>
+                            <input id="meter" type="text" disabled>
+                        </div>
+                        <div class="modalInput">
+                            <label for="">Date of Installment</label>
+                            <input id="dateInstall" type="date">
+                        </div>
+                        <div class="modalInput">
+                            <label for="">Status</label>
+                            <input id="stat" type="text">
+                        </div>
+                        <div class="modalInput">
+                            <label for="">Inspection Status</label>
+                            <input id="inspStat" type="text">
+                        </div>
+                        <div class="modalBtn">
+                            <button id="saveDevModal" type="submit">save</button>
+                            <button id="closeDevModal">close</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </footer>
+    <script src="/index.js"></script>
+</body>
+</html>
