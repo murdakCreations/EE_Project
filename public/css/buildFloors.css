@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: arial;
+    border: none;
+}
+
+nav {
+    background-color: black;
+    padding: 1em;
+}
+
+nav a {
+    color: white;
+}
+
+nav .logo {
+    font-size: 36px;
+}
+
+nav .notif img{
+    height: 40px;
+    width: 40px;
+    float: right;
+}
+
+nav .buildName {
+    font-size: 26px;
+    float:right;
+    margin-top: 0.3em;
+    margin-right: 0.5em;
+}
+
+nav .notifContent {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: gray;
+    float: right;
+}
+
+.notif:hover .notifContent {
+    display: block;
+}
+
+main .modalForm {
+    display: none;
+    justify-content: center;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(230, 230, 230, 0.8); /* Black w/ opacity */
+}
+
+#dottedModal {
+    margin-top: 200px;
+    background-color: #fff;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+}
+
+#dottedModal input {
+    margin: 5px;
+    border-bottom: #000 1px solid;
+}
+
+#dottedModal .addFloorName {
+    margin: 5px;
+}
+
+#dottedModal .btns{
+    float: right;
+}
+
+#dottedModal .btns button{
+    /*top right bottom left*/
+    margin: 0px 5px 0px 5px;
+    padding: 5px 10px;
+}
+
+#belowNav {
+    background-color: #CCCBCB;
+    display: flex;
+    padding: 10px;
+}
+
+.left {
+    width: 20%;
+}
+
+.left ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.left li {
+    float: left;
+    margin: 5px;
+}
+
+.right {
+    width: 80%;
+}
+
+.right input{
+    float: right;
+    height: 100%;
+}
+
+#search {
+    float: right;
+    background-color: #fff;
+}
+
+#floorArea {
+    display: flex;
+}
+
+.floorName {
+    margin: 90px 0 0 0;
+}
+
+#addFloor {
+    width: 200px;
+    height: 200px;
+    margin: 20px 10px 10px 10px;
+    background-color: #fff;
+    border: 2px dashed #CCCBCB;
+    cursor: pointer;
+}
+
+footer {
+    background-color: black;
+    padding: 1em;
+}
+
+footer a {
+    color: white;
+}
