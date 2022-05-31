@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building rooms</title>
+    <link rel="stylesheet" href="/css/buildRooms.css">
+</head>
+<body>
+    <nav>
+        <a class="logo" href="#">E-LOGO</a>
+        <a class="notif" href="#">
+            <img src="/images/img_489991.png">
+            <div class="notifContent">this is a notification</div>
+        </a>
+        <a class="buildName" href="#">Building Name</a>    
+    </nav>
+    <div id="belowNav">
+        <div class="left">
+            <ul>
+                <li><a href="">Building</a></li>
+                <li>></li>
+                <li><a href="">Floor</a></li>
+                <li>></li>
+                <li><a href="">Room</a></li>
+            </ul>
+        </div>
+        
+        <div class="right">
+            <input type="text" placeholder="Search here">
+            <button id="search"><img src="/images/Group 19.png" alt=""></button>
+        </div>
+    </div>
+    <main>
+        <div class="pgTitle">
+            <div>Rooms in </div>
+            <!--<input type="text" value=""-->
+        </div>
+        <div id="roomArea">
+            <% for(var i = 0; i < rooms.length; i++) {%>
+                <%if (rooms[i].roomID) {%>
+                    <div onmouseover="hovered(this.id)" onmouseleave="left(this.id)" 
+                    id="<%=rooms[i].roomID%>"
+                    style="width: 200px;
+                    height: 200px;
+                    /*top right bottom left*/
+                    margin: 20px 10px 10px 10px;
+                    text-align: center;"    
+                    >
+                        <div class="roomName"><%=rooms[i].roomName%></div>
+                        <div class="roomBtns" 
+                        style="display: none;
+                        margin: 0 0 0 35px;">
+                            <a style="padding: 5px;" href="/device">Visit</a>
+                            <a style="padding: 5px;" href="#">Edit</a>
+                            <a style="padding: 5px;" href="#">Delete</a>
+                        </div>
+                    </div>
+                <%}%>    
+            <%}%>
+            <button id="addRoom">Add Room</button>
+                  
+            
+        </div>
+        <form class="modalForm" action="/room" method="POST">
+            <div id="dottedModal">
+                <div class="addRoomName">
+                    <div>
+                        <label for="floorName">Floor Name:</label>
+                        <input type="text" name="floorName" id="floorName" value="" disabled>
+                    </div>
+                    <div>
+                        <label for="roomID">Room ID:</label>
+                        <input type="text" name="roomID" id="roomID">
+                    </div>
+                    <label for="roomName">Room Name:</label>
+                    <input type="text" name="roomName" id="roomName">
+                </div>
+                <div class="btns">
+                    <button id="save" type="submit">Save</button>
+                    <button id="close" type="button">Close</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </footer>
+    <script src="/javascript/buildRooms.js"></script>
+</body>
+</html>
