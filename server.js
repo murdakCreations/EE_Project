@@ -22,6 +22,7 @@ MongoClient.connect(connectionString, { useUnifiedTopology: true })
             console.log('Connected to Database');
             const db = client.db('deviceDB');
             const devCollection = db.collection('deviceCollection');
+            
             app.get('/', (req, res) =>{
                 const cursor = devCollection.find().toArray()
                     .then(results => {
