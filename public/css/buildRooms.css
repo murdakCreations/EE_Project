@@ -8,15 +8,22 @@
 
 nav {
     background-color: black;
-    padding: 1em;
+    padding: 10px;
+    height: fit-content;
 }
 
 nav a {
     color: white;
 }
 
-nav .logo {
+.logo {
     font-size: 36px;
+}
+
+.logo img {
+    width: 80px;
+    /*top right bottom left*/
+    margin: 0 0 0 10px;
 }
 
 nav .notif img{
@@ -36,8 +43,13 @@ nav .notifContent {
     display: none;
     position: absolute;
     z-index: 1;
-    background-color: gray;
-    float: right;
+    background-color: white;
+    color: #000;
+    left: 950px;
+    width: 300px;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .notif:hover .notifContent {
